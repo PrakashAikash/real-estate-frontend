@@ -42,7 +42,7 @@ const App = () => {
         <Route path="/properties/single/:id" element={<PropertyDetails />} />
         <Route path="/about" element={<Aboutus />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/ai-property-hub" element={<AIPropertyHub />} />
+        {/*<Route path="/ai-property-hub" element={<AIPropertyHub />} />*/}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
