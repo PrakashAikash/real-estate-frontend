@@ -58,7 +58,7 @@ const floatingAnimation = {
     ease: "easeInOut"
   }
 };
-
+/*
 const glowAnimation = {
   boxShadow: [
     "0 0 20px rgba(59, 130, 246, 0.2)",
@@ -71,6 +71,21 @@ const glowAnimation = {
     ease: "easeInOut"
   }
 };
+*/
+
+const glowAnimation = {
+  boxShadow: [
+    "0 0 20px rgba(37, 99, 235, 0.3)",  // Primary Blue glow
+    "0 0 40px rgba(59, 130, 246, 0.6)", // Lighter Blue glow
+    "0 0 20px rgba(37, 99, 235, 0.3)",  
+  ],
+  transition: {
+    duration: 2,
+    repeat: Infinity,
+    repeatType: "reverse",
+  },
+};
+
 
 const sparkleVariants = {
   animate: {
@@ -182,7 +197,7 @@ const Navbar = () => {
             </motion.div>
             <div className="flex flex-col">
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent group-hover:from-indigo-600 group-hover:via-blue-600 group-hover:to-purple-600 transition-all duration-500">
-                BuildEstate
+                MyCityFlat
               </span>
               <span className="text-xs text-gray-500 font-medium -mt-1">
                 Premium Properties
@@ -526,8 +541,8 @@ const NavLinks = ({ currentPath }) => {
               <Sparkles className="w-3 h-3 text-yellow-400" />
             </motion.div>
           </div>
-          <span>AI Property Hub</span>
-          
+          <span>Search</span>
+
           {/* Premium badge */}
           {!isAIHubActive && (
             <motion.span
@@ -539,7 +554,7 @@ const NavLinks = ({ currentPath }) => {
               className="absolute -top-2 -right-2 px-2 py-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 rounded-full text-[10px] font-bold shadow-lg flex items-center gap-2"
             >
               <Zap className="w-2.5 h-2.5" />
-              NEW
+              
             </motion.span>
           )}
 
@@ -562,7 +577,7 @@ const NavLinks = ({ currentPath }) => {
           {/* Tooltip */}
           <div className="absolute -bottom-14 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
             <div className="bg-gray-900 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap">
-              AI-powered property recommendations
+             {/* AI-powered property recommendation*/}
               <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
             </div>
           </div>
@@ -659,9 +674,9 @@ const MobileNavLinks = ({
             </motion.div>
           </div>
           <div className="flex-1">
-            <div className="font-bold text-lg">AI Property Hub</div>
+            <div className="font-bold text-lg"></div>
             <div className={`text-sm ${isAIHubActive ? "text-indigo-100" : "text-indigo-500"}`}>
-              Smart property recommendations
+              
             </div>
           </div>
           {!isAIHubActive && (
@@ -671,7 +686,7 @@ const MobileNavLinks = ({
               className="px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 rounded-full text-xs font-bold shadow-lg flex items-center gap-1"
             >
               <Zap className="w-3 h-3" />
-              NEW
+              
             </motion.span>
           )}
           

@@ -6,11 +6,10 @@ import heroimage from "../assets/images/heroimage.png";
 import { RadialGradient } from "react-text-gradients";
 
 const popularLocations = [
-  "Mumbai",
-  "Delhi", 
+  
+   
   "Bangalore",
-  "Hyderabad",
-  "Chennai"
+  
 ];
 
 const quickFilters = [
@@ -21,10 +20,10 @@ const quickFilters = [
 ];
 
 const stats = [
-  { icon: Users, value: "50K+", label: "Happy Customers", color: "from-blue-500 to-cyan-500" },
-  { icon: Home, value: "25K+", label: "Properties Listed", color: "from-green-500 to-emerald-500" },
-  { icon: Star, value: "4.9", label: "Average Rating", color: "from-yellow-500 to-orange-500" },
-  { icon: Shield, value: "100%", label: "Verified Properties", color: "from-purple-500 to-pink-500" }
+// { icon: Users, value: "50K+", label: "Happy Customers", color: "from-blue-500 to-cyan-500" },
+// { icon: Home, value: "25K+", label: "Properties Listed", color: "from-green-500 to-emerald-500" },
+  //{ icon: Star, value: "4.9", label: "Average Rating", color: "from-yellow-500 to-orange-500" },
+  //{ icon: Shield, value: "100%", label: "Verified Properties", color: "from-purple-500 to-pink-500" }
 ];
 
 // Enhanced animation variants
@@ -203,9 +202,9 @@ const Hero = () => {
                   variants={itemVariants}
                   className="text-gray-700 text-xl sm:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
                 >
-                  Discover exceptional properties in prime locations with our 
-                  <span className="text-blue-600 font-semibold"> AI-powered search</span> and 
-                  <span className="text-purple-600 font-semibold"> expert guidance</span>
+                 {/* Discover exceptional properties in prime locations with our */}
+                  <span className="text-blue-600 font-semibold"></span> 
+                  <span className="text-purple-600 font-semibold"> </span>
                 </motion.p>
               </motion.div>
 

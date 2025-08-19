@@ -299,13 +299,13 @@ const PropertiesShow = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-blue-600 font-semibold tracking-wide uppercase text-sm">Explore Properties</span>
+          <span className="text-blue-600 font-semibold tracking-wide uppercase text-sm"></span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
-            Featured Properties
+          Properties
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover our handpicked selection of premium properties designed to match your lifestyle needs
+           {/*} Discover our handpicked selection of premium properties designed to match your lifestyle needs*/}
           </p>
         </motion.div>
 
