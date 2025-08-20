@@ -28,9 +28,7 @@ export default function MissionVision() {
               <h2 className="text-2xl font-bold">Our Mission</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              To provide a transparent and efficient property rental experience for all users. 
-              We strive to make the process of finding your perfect home as seamless as possible, 
-              while maintaining the highest standards of service and integrity.
+             To make property search in Bangalore simple, transparent, and stress-free, helping you find your dream home with ease.
             </p>
           </motion.div>
 
@@ -45,9 +43,7 @@ export default function MissionVision() {
               <h2 className="text-2xl font-bold">Our Vision</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              Empowering millions of users to find their perfect home with ease and trust. 
-              We envision a future where property search is not just about finding a place to live, 
-              but about discovering a community to belong to.
+              To empower people to not just find a house in Bangalore, but to discover a community they truly belong to. Delivering a seamless rental and buying experience with trust, honesty, and top-class service.
             </p>
           </motion.div>
         </div>

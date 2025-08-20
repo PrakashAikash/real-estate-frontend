@@ -6,17 +6,17 @@ const values = [
   {
     icon: Shield,
     title: 'Trust',
-    description: 'We verify all property owners and renters to ensure a safe and reliable experience for everyone.',
+    description: 'Verified owners and renters for safe deals.',
   },
   {
     icon: CheckCircle,
     title: 'Transparency',
-    description: 'Clear and honest property listings with accurate information and no hidden fees.',
+    description: 'Honest listings, no hidden charges.',
   },
   {
     icon: Clock,
     title: 'Efficiency',
-    description: 'Streamlined property search and listing process to save you time and effort.',
+    description: 'Fast, easy, and hassle-free property search.',
   },
 ];
 

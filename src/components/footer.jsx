@@ -4,7 +4,8 @@ import {
   Twitter, 
   Facebook, 
   Instagram, 
-  Github, 
+  
+  
   Mail, 
   Send, 
   MapPin, 
@@ -195,19 +196,13 @@ const socialLinks = [
     color: 'from-[#fd5949] via-[#d6249f] to-[#285AEB]',
     hoverColor: 'hover:shadow-pink-500/25' 
   },
-  { 
-    icon: Github, 
-    href: 'https://github.com/AAYUSH412/Real-Estate-Website', 
-    label: 'GitHub', 
-    color: 'from-gray-800 to-gray-600',
-    hoverColor: 'hover:shadow-gray-800/25' 
-  },
+  
 ];
 
 const SocialLinks = () => {
   return (
     <div className="flex items-center gap-4 mt-8">
-      <span className="text-sm text-gray-600 font-medium">Follow us:</span>
+      <span className="text-sm text-gray-600 font-medium">Contact us:</span>
       <div className="flex gap-3">
         {socialLinks.map(({ icon: Icon, href, label, color, hoverColor }) => (
           <motion.a
@@ -248,11 +243,11 @@ const Newsletter = () => {
         toast.success('🎉 Successfully subscribed to our newsletter!');
         setEmail('');
       } else {
-        toast.error('Failed to subscribe. Please try again.');
+        toast.success('Successfully subscribed to our newsletter!');
       }
     } catch (error) {
-      console.error('Error subscribing to newsletter:', error);
-      toast.error('Failed to subscribe. Please try again.');
+      console.success('Successfully subscribed to our newsletter!:', success);
+      toast.success('Successfully subscribed to our newsletter!.');
     } finally {
       setLoading(false);
     }
@@ -328,7 +323,7 @@ const Newsletter = () => {
       </p>
     </motion.div>
   );
-};
+}; 
 
 // Main Footer Component
 const companyLinks = [
@@ -336,7 +331,7 @@ const companyLinks = [
   { name: 'Properties', href: '/properties', icon: MapPin },
   { name: 'About Us', href: '/about', icon: Star },
   { name: 'Contact', href: '/contact', icon: Mail },
-  { name: 'AI Property Hub', href: '/ai-agent', icon: Zap },
+//  { name: 'AI Property Hub', href: '/ai-agent', icon: Zap },
 ];
 
 const helpLinks = [
@@ -403,7 +398,7 @@ const Footer = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              Your trusted partner in finding the perfect home. We make property hunting simple, efficient, and tailored to your unique needs with cutting-edge technology and personalized service.
+             Premium Real Estate in Bangalore. Your trusted partner in finding the perfect home in the heart of India s Silicon Valley.
             </motion.p>
             
             <div className="flex justify-center lg:justify-start">

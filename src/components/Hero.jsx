@@ -194,7 +194,7 @@ const Hero = () => {
                   </RadialGradient>
                   <br />
                   <span className="text-gray-900 bg-gradient-to-r from-gray-800 via-gray-900 to-black bg-clip-text text-transparent">
-                    Dream Home
+                    Home with
                   </span>
                 </h1>
 
@@ -203,8 +203,8 @@ const Hero = () => {
                   className="text-gray-700 text-xl sm:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
                 >
                  {/* Discover exceptional properties in prime locations with our */}
-                  <span className="text-blue-600 font-semibold"></span> 
-                  <span className="text-purple-600 font-semibold"> </span>
+                  <span className="text-blue-600 font-semibold">MyCity</span> 
+                  <span className="text-purple-600 font-semibold">tyFlat</span>
                 </motion.p>
               </motion.div>
 
