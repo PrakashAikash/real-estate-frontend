@@ -191,7 +191,7 @@ const socialLinks = [
   },
   { 
     icon: Instagram, 
-    href: '#', 
+    href: 'https://www.instagram.com/mycityflat/profilecard/?igsh=ajhoY3RhcW1qYXF0', 
     label: 'Instagram', 
     color: 'from-[#fd5949] via-[#d6249f] to-[#285AEB]',
     hoverColor: 'hover:shadow-pink-500/25' 

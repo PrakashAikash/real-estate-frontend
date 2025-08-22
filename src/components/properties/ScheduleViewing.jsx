@@ -53,15 +53,14 @@ const ScheduleViewing = ({ propertyId, propertyTitle, propertyLocation, property
 
     return selected < now;
   };
-
-  const handleDateChange = (e) => {
-    const selectedDate = e.target.value;
-    if (isWeekend(selectedDate)) {
-      toast.error('Viewings are not available on weekends');
-      return;
-    }
-    setFormData(prev => ({ ...prev, date: selectedDate, time: '' }));
-  };
+const handleDateChange = (e) => {
+  const selectedDate = e.target.value;
+  // if (isWeekend(selectedDate)) {
+  //   toast.error('Viewings are not available on weekends');
+  //   return;
+  // }
+  setFormData(prev => ({ ...prev, date: selectedDate, time: '' }));
+};
 
   const handleTimeChange = (e) => {
     const selectedTime = e.target.value;
@@ -302,7 +301,7 @@ const ScheduleViewing = ({ propertyId, propertyTitle, propertyLocation, property
 
                     <div>
                       <label className="flex justify-between text-sm font-medium text-gray-700 mb-1">
-                        <span>Additional Notes</span>
+                        <span>Please Enter your PHONE NUMBER. and notes</span>
                         <span className="text-gray-400 text-xs">(Optional)</span>
                       </label>
                       <textarea
