@@ -1,4 +1,4 @@
-import nakulimage from '../images/profile.png';
+import nakulimage from '../images/sir.png';
 import aayushimage from '../images/profile.png';
 
 export const teamMembers = [
