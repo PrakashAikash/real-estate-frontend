@@ -301,7 +301,7 @@ const handleDateChange = (e) => {
 
                     <div>
                       <label className="flex justify-between text-sm font-medium text-gray-700 mb-1">
-                        <span>Please Enter your PHONE NUMBER. and notes</span>
+                        <span>notes</span>
                         <span className="text-gray-400 text-xs">(Optional)</span>
                       </label>
                       <textarea
