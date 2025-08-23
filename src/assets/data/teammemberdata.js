@@ -3,9 +3,9 @@ import aayushimage from '../images/profile.png';
 
 export const teamMembers = [
     {
-      name: 'Aditya',
+      name: 'Aditya Singh',
       position: 'Founder & CEO',
-      bio: 'With 15+ years in real estate, Aditya leads our vision of transforming property search.',
+      bio: 'mycityflat.in is a trusted Bangalore real estate channel partner, connecting you with the best apartments, villas, and plots from reputed builders—making your property journey simple, smart, and stress-free.',
       image: nakulimage,
       social: {
         linkedin: '#',

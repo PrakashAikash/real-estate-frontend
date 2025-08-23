@@ -43,7 +43,12 @@ export default function MissionVision() {
               <h2 className="text-2xl font-bold">Our Vision</h2>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              To empower people to not just find a house in Bangalore, but to discover a community they truly belong to. Delivering a seamless rental and buying experience with trust, honesty, and top-class service.
+              To become Bangalore’s most trusted and technology-driven real estate channel partner, where innovation meets reliability. We envision:
+Helping every homebuyer find their dream home with clarity and confidence.
+Empowering investors to make profitable, data-backed property decisions.
+Using AI and digital innovation to deliver faster, smarter, and more personalized real estate solutions.
+Building long-term relationships based on trust, transparency, and value creation.
+At MyCityFlat, we believe buying property is more than a transaction—it’s a milestone in life. Our vision is to be the partner who makes that milestone truly memorable.
             </p>
           </motion.div>
         </div>
