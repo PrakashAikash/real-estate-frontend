@@ -170,7 +170,7 @@ const Navbar = () => {
       }`}
     >
       {/* Premium gradient border */}
-      <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" />
+      <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-[#da4b29] via-[#da4b29] to-[#da4b29]" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -184,7 +184,7 @@ const Navbar = () => {
                 ...glowAnimation
               }}
               transition={{ duration: 0.5 }}
-              className="relative p-2.5 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg group-hover:shadow-blue-500/30"
+              className="relative p-2.5 rounded-xl bg-gradient-to-br from-[#da4b29] via-[#da4b29] to-[#da4b29] shadow-lg group-hover:shadow-[#da4b29]/60"
             >
               <img src={logo} alt="BuildEstate logo" className="w-6 h-6 brightness-0 invert" />
               {/* Floating sparkles */}
@@ -195,12 +195,12 @@ const Navbar = () => {
                 <Sparkles className="w-3 h-3 text-yellow-300" />
               </motion.div>
             </motion.div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent group-hover:from-indigo-600 group-hover:via-blue-600 group-hover:to-purple-600 transition-all duration-500">
-                MyCityFlat
+            <div className="flex flex-col items-start">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#da4b29] via-[#da4b29] to-[#da4b29] bg-clip-text text-transparent group-hover:from-[#b83d20] group-hover:via-[#da4b29] group-hover:to-[#ff5c33] transition-all duration-500">
+                mycityflat
               </span>
-              <span className="text-xs text-gray-500 font-medium -mt-1">
-                Premium Properties
+              <span className="text-[8px] italic text-gray-500 font-medium text-[#da4b29] self-end">
+                REAL ESTATE AGENCY
               </span>
             </div>
           </Link>
