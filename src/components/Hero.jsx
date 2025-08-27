@@ -188,7 +188,7 @@ const Hero = () => {
               <motion.div variants={itemVariants} className="mb-8">
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-[0.9]">
                   <RadialGradient
-                    gradient={["circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%"]}
+                    gradient={["circle, rgba(227, 74, 42, 255) 0%, rgba(149, 4, 118, 1) 100%"]}
                   >
                     Find Your Perfect
                   </RadialGradient>
@@ -203,8 +203,12 @@ const Hero = () => {
                   className="text-gray-700 text-xl sm:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
                 >
                  {/* Discover exceptional properties in prime locations with our */}
-                  <span className="text-blue-600 font-semibold">MyCity</span> 
-                  <span className="text-purple-600 font-semibold">tyFlat</span>
+                 <span className="text-2xl font-bold bg-gradient-to-r from-[#da4b29] via-[#da4b29] to-[#da4b29] bg-clip-text text-transparent group-hover:from-[#b83d20] group-hover:via-[#da4b29] group-hover:to-[#ff5c33] transition-all duration-500">
+                mycityflat
+              </span>
+              <span className="block text-[8px] italic text-gray-500 font-medium mt-1">
+                REAL ESTATE AGENCY
+              </span>
                 </motion.p>
               </motion.div>
 
