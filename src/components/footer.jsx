@@ -379,19 +379,21 @@ const Footer = () => {
           >
             <div className="flex items-center justify-center lg:justify-start mb-6">
               <motion.div 
-                className="p-3 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-lg"
+                className="p-3 relative p-2.5 rounded-xl bg-gradient-to-br from-[#da4b29] via-[#da4b29] to-[#da4b29] shadow-lg group-hover:shadow-[#da4b29]/60"
+                
                 animate={glowAnimation}
               >
                 <Home className="h-8 w-8 text-white" />
               </motion.div>
-              <div className="ml-4">
-                <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
+              <div className="flex flex-col items-start">
+                <span className="text-2xl font-bold bg-gradient-to-r from-[#da4b29] via-[#da4b29] to-[#da4b29] bg-clip-text text-transparent group-hover:from-[#b83d20] group-hover:via-[#da4b29] group-hover:to-[#ff5c33] transition-all duration-500">
                   MyCityFlat
                 </span>
-                <p className="text-sm text-gray-500 font-medium">Premium Real Estate</p>
+                <p className="text-[8px] italic text-gray-500 font-medium text-[#da4b29] self-end">REAL ESTATE AGENCY</p>
               </div>
             </div>
-            
+
+
             <motion.p 
               className="text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-lg"
               initial={{ opacity: 0 }}
