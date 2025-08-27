@@ -15,7 +15,7 @@ import ResetPassword from './components/resetpassword';
 import Footer from './components/footer';
 import NotFoundPage from './components/Notfound';
 import { AuthProvider } from './context/AuthContext';
-import AIPropertyHub from './pages/Aiagent'
+import AIPropertyHub from './pages/Home'
 import StructuredData from './components/SEO/StructuredData';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -43,7 +43,7 @@ const App = () => {
         <Route path="/about" element={<Aboutus />} />
         <Route path="/contact" element={<Contact />} />
         {/*<Route path="/ai-property-hub" element={<AIPropertyHub />} />*/}
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
       <ToastContainer />

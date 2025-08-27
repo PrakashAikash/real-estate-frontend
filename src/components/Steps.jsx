@@ -281,7 +281,7 @@ export default function HowItWorks() {
             transition={{ delay: 0.8 }}
           >
             Finding your perfect property is easy with our{" "}
-            <span className="font-semibold text-blue-600">AI-powered</span> three-step process
+            <span className="font-semibold text-blue-600">website</span> three-step process
           </motion.p>
           
           {/* Stats */}
@@ -448,8 +448,8 @@ export default function HowItWorks() {
                   S
                 </div>
                 <div className="text-left">
-                  <p className="font-bold text-gray-900">Sarah Johnson</p>
-                  <p className="text-gray-600 text-sm">New York</p>
+                  <p className="font-bold text-gray-900">Aiman Siddiqui</p>
+                  <p className="text-gray-600 text-sm">Banglore</p>
                 </div>
               </div>
               

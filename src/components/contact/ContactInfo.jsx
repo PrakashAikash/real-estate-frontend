@@ -7,19 +7,19 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    content: '+1 (234) 567-890',
-    link: 'tel:+1234567890',
+    content: '+91 (7760) 617-195',
+    link: 'tel:+917760617195',
   },
   {
     icon: Mail,
     title: 'Email',
-    content: 'support@buildestate.com',
-    link: 'mailto:support@buildestate.com',
+    content: 'support@mycityflat.in',
+    link: 'mailto:support@mycityflat.in',
   },
   {
     icon: MapPin,
     title: 'Address',
-    content: '123 Main Street, City, Country',
+    content: 'Whitefield Banglore',
     link: '#map',
   },
   {
