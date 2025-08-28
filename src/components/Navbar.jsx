@@ -541,7 +541,8 @@ const NavLinks = ({ currentPath }) => {
               <Sparkles className="w-3 h-3 text-yellow-400" />
             </motion.div>
           </div>
-          <span>Search</span>
+         {/* <span>mycityflat</span>*/}
+        
 
           {/* Premium badge */}
           {!isAIHubActive && (
@@ -674,7 +675,7 @@ const MobileNavLinks = ({
             </motion.div>
           </div>
           <div className="flex-1">
-            <div className="font-bold text-lg"></div>
+            <div className="font-bold text-lg">mycityflat</div>
             <div className={`text-sm ${isAIHubActive ? "text-indigo-100" : "text-indigo-500"}`}>
               
             </div>

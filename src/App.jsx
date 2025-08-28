@@ -43,7 +43,7 @@ const App = () => {
         <Route path="/about" element={<Aboutus />} />
         <Route path="/contact" element={<Contact />} />
         {/*<Route path="/ai-property-hub" element={<AIPropertyHub />} />*/}
-        <Route path="/" element={<Home />} />
+        <Route path="/ai-property-hub" element={<Home />} />
       </Routes>
       <Footer />
       <ToastContainer />
