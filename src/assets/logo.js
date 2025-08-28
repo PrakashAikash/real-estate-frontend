@@ -1,8 +1,8 @@
-import Googlelogo from './Google_2015_logo.svg'
-import Bookinglogo from './Booking.com_logo.svg'
-import Airbnblogo from './airbnb.svg'
-import Microsoftlogo from './microsoft.svg'
-import Amazonlogo from './Amazon_logo.svg'
+import Googlelogo from './Prestige_Group.svg'
+import Bookinglogo from './Assetz-logo.svg'
+import Airbnblogo from './briz.svg'
+import Microsoftlogo from './sobha.svg'
+import Amazonlogo from './icon_logo.svg'
 
 
 export const logos={

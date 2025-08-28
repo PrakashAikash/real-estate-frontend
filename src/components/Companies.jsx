@@ -151,10 +151,10 @@ const Companies = () => {
             className="text-center mb-12"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              Powering Success for Global Brands
+              Building Dreams for Every Homeowner
             </h3>
             <p className="text-gray-600">
-              {`From startups to Fortune 500 companies, we're the trusted choice
+              {`From modern apartments to luxurious villas, we connect you with the most trusted builders in Bangalore.
 `}            </p>
           </motion.div>
 
