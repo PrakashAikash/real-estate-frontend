@@ -169,7 +169,7 @@ const PropertyCard = ({ property, viewType }) => {
             group-hover:text-blue-600 transition-colors">
             {property.title}
           </h3>
-
+          {/*
           <div className="flex items-center gap-2">
             <div className="flex-1">
               <p className="text-sm text-gray-500 mb-1">Price</p>
@@ -180,8 +180,34 @@ const PropertyCard = ({ property, viewType }) => {
                 </span>
               </div>
             </div>
-            {/* Rest of your price-related content */}
+            {/* Rest of your price-related content 
           </div>
+          */}
+
+          <div className="flex items-center gap-2">
+  <div className="flex-1">
+    <p className="text-sm text-gray-500 mb-1">Price</p>
+    <div className="flex items-center gap-1">
+      <IndianRupee className="w-5 h-5 text-blue-600" />
+
+      {/* Price with overlay */}
+      <div className="relative inline-block">
+        {/* Blurred Price */}
+        <span className="text-2xl font-bold text-blue-600 blur-sm select-none">
+          {Number(property.price).toLocaleString('en-IN')}
+        </span>
+
+        {/* Overlay Text */}
+        <span className="absolute inset-0 flex items-center justify-center text-sm text-red-600 font-semibold">
+          Exclusive Price
+        </span>
+      </div>
+    </div>
+  </div>
+
+  {/* Rest of your price-related content */}
+</div>
+
         </div>
 
         {/* Property Features */}
