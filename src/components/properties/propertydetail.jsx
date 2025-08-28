@@ -326,11 +326,11 @@ const PropertyDetails = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <div className="bg-blue-50 rounded-lg p-6 mb-6">
-                  <p className="text-3xl font-bold text-blue-600 mb-2">
+                  <p className="text-3xl font-bold text-blue-600 mb-2 blur-md select-none">
                     ₹{Number(property.price).toLocaleString('en-IN')}
                   </p>
                   <p className="text-gray-600">
-                    Available for {property.availability}
+                    Best Price Available for {property.availability}
                   </p>
                 </div>
 

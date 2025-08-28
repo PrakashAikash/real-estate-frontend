@@ -167,10 +167,37 @@ const PropertyCard = ({ property }) => {
         </div>
         
         <div className="flex items-center justify-between">
+
+          {/*
           <div className="flex items-center text-blue-600 font-bold">
             <IndianRupee className="h-5 w-5 mr-1" />
             <span className="text-xl">{Number(property.price).toLocaleString('en-IN')}</span>
           </div>
+          */}
+
+        {/*
+          <div className="flex items-center text-blue-600 font-bold">
+            <IndianRupee className="h-5 w-5 mr-1" />
+            <span className="text-xl blur-md select-none">
+              {Number(property.price).toLocaleString('en-IN')}
+              </span>
+          </div>
+          */}
+
+          <div className="flex items-center text-blue-600 font-bold relative">
+  <IndianRupee className="h-5 w-5 mr-1" />
+  
+  {/* Blur Price */}
+  <span className="text-xl blur-md select-none">
+    {Number(property.price).toLocaleString('en-IN')}
+  </span>
+
+  {/* Overlay Text */}
+  <span className="absolute left-6 text-sm text-red-600 font-semibold">
+    Exclusive Price
+  </span>
+</div>
+
           
           <div className="text-sm bg-blue-50 text-blue-700 px-2 py-1 rounded-md flex items-center">
             <Building className="w-3.5 h-3.5 mr-1" />
