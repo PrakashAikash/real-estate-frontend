@@ -543,6 +543,7 @@ const Footer = () => {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            {/*
             <motion.p 
               className="text-sm text-gray-300 text-center md:text-left flex items-center gap-2"
               initial={{ opacity: 0, y: 20 }}
@@ -553,6 +554,29 @@ const Footer = () => {
               <Heart className="w-4 h-4 text-red-400 animate-pulse" />
               <span className="text-gray-400">@prakash_aikash</span>
             </motion.p>
+            */}
+            <motion.p 
+  className="text-sm text-gray-300 text-center md:text-left flex items-center gap-2"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+>
+  <span>© {new Date().getFullYear()} MyCityFlat. All Rights Reserved.</span>
+  <Heart className="w-4 h-4 text-red-400 animate-pulse" />
+  
+  {/* Instagram clickable link */}
+  <a 
+    href="https://instagram.com/prakash_aikash" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-gray-400 hover:text-pink-500 transition-colors"
+  >
+    @prakash_aikash
+  </a>
+</motion.p>
+
+
+            
             
             <motion.a
               href="/properties"
