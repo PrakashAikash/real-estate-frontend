@@ -268,13 +268,18 @@ const Signup = () => {
                 >
                   <motion.div
                     animate={pulseAnimation}
-                    className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center"
+                    className="w-10 h-10 bg-gradient-to-r from-[#da4b29] via-[#b83d20] to-[#ff5c33] rounded-xl flex items-center justify-center"
                   >
                     <Home className="w-6 h-6 text-white" />
                   </motion.div>
-                  <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                    BuildEstate
-                  </h1>
+                  <div className="flex flex-col items-start">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#da4b29] via-[#da4b29] to-[#da4b29] bg-clip-text text-transparent group-hover:from-[#b83d20] group-hover:via-[#da4b29] group-hover:to-[#ff5c33] transition-all duration-500">
+                mycityflat
+              </span>
+              <span className="text-[8px] italic text-gray-500 font-medium text-[#da4b29] self-end">
+                REAL ESTATE AGENCY
+              </span>
+            </div>
                 </motion.div>
               </Link>
               

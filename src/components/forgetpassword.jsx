@@ -122,7 +122,7 @@ const ForgotPassword = () => {
                 >
                   <motion.div
                     animate={pulseAnimation}
-                    className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-green-500/25"
+                    className="w-20 h-20 bg-gradient-to-br from-[#da4b29] via-[#b83d20] to-[#ff5c33] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-green-500/25"
                   >
                     <CheckCircle className="w-10 h-10 text-white" />
                   </motion.div>
@@ -143,13 +143,19 @@ const ForgotPassword = () => {
                   >
                     <motion.div
                       animate={floatingAnimation}
-                      className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl shadow-lg shadow-blue-500/25"
+                      className="p-3 bg-gradient-to-br from-[#da4b29] via-[#b83d20] to-[#ff5c33] rounded-xl shadow-lg shadow-blue-500/25"
                     >
                       <Lock className="w-6 h-6 text-white" />
                     </motion.div>
-                    <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                      BuildEstate
-                    </h1>
+                    <div className="flex flex-col items-center">
+  <span className="text-2xl font-bold bg-gradient-to-r from-[#da4b29] via-[#da4b29] to-[#da4b29] bg-clip-text text-transparent group-hover:from-[#b83d20] group-hover:via-[#da4b29] group-hover:to-[#ff5c33] transition-all duration-500">
+    mycityflat
+  </span>
+  <span className="text-[8px] italic text-gray-500 font-medium mt-1">
+    REAL ESTATE AGENCY
+  </span>
+</div>
+
                   </motion.div>
                 </Link>
                 

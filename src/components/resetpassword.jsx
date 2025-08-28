@@ -251,9 +251,14 @@ const ResetPassword = () => {
                 >
                   <Sparkles className="w-full h-full" />
                 </motion.div>
-                <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                  BuildEstate
-                </h2>
+                <div className="flex flex-col items-start">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#da4b29] via-[#da4b29] to-[#da4b29] bg-clip-text text-transparent group-hover:from-[#b83d20] group-hover:via-[#da4b29] group-hover:to-[#ff5c33] transition-all duration-500">
+                mycityflat
+              </span>
+              <span className="text-[8px] italic text-gray-500 font-medium text-[#da4b29] self-end">
+                REAL ESTATE AGENCY
+              </span>
+            </div>
               </motion.div>
             </Link>
             
@@ -280,7 +285,7 @@ const ResetPassword = () => {
               </label>
               <div className="relative group">
                 <motion.div
-                  animate={passwordFocused ? { scale: 1.1, color: "#3B82F6" } : { scale: 1, color: "#9CA3AF" }}
+                  animate={passwordFocused ? { scale: 1.1, color: "#e24729" } : { scale: 1, color: "#e24729" }}
                   className="absolute left-3 top-1/2 -translate-y-1/2 z-10"
                 >
                   <Lock className="h-5 w-5" />
@@ -339,7 +344,7 @@ const ResetPassword = () => {
               </label>
               <div className="relative group">
                 <motion.div
-                  animate={confirmPasswordFocused ? { scale: 1.1, color: "#3B82F6" } : { scale: 1, color: "#9CA3AF" }}
+                  animate={confirmPasswordFocused ? { scale: 1.1, color: "#e24729" } : { scale: 1, color: "#e24729" }}
                   className="absolute left-3 top-1/2 -translate-y-1/2 z-10"
                 >
                   <Shield className="h-5 w-5" />
