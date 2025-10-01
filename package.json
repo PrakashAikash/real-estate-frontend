@@ -1,15 +1,15 @@
 {
-  "name": "buildestate-frontend",
+  "name": "mycityflat-frontend",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "main": "App.jsx",
   "description": "Mycityfla - Premium Real Estate Platform User Interface",
-  "author": "Aayush Vaghela",
+  "author": "Prakash kumar sahni",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AAYUSH412/Real-Estate-Website"
+    "url": "https://github.com/PrakashAikash"
   },
   "scripts": {
     "dev": "vite",
