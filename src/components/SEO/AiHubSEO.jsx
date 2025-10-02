@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
-const SEO = ({ title, description, keywords, propertyData }) => {
+const AiHubSEO = ({ propertyData }) => {
   const location = useLocation();
   const currentUrl = `https://www.mycityflat.in${location.pathname}`;
 
-  // Structured Data for Property
+  // Structured Data for Property or AI Hub
   const structuredData = propertyData
     ? {
         "@context": "https://schema.org",
@@ -29,43 +29,50 @@ const SEO = ({ title, description, keywords, propertyData }) => {
         numberOfRooms: propertyData.beds || "",
         numberOfBathroomsTotal: propertyData.baths || "",
       }
-    : null;
+    : {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: "AI Property Hub",
+        applicationCategory: "RealEstateApplication",
+        description:
+          "Analyze real estate trends and properties with AI-powered insights for Bangalore and other cities.",
+        url: "https://www.mycityflat.in/ai-property-hub",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "INR",
+          availability: "https://schema.org/InStock",
+        },
+      };
 
   return (
     <>
       <Helmet>
-        {/* Dynamic Title */}
+        {/* Dynamic SEO Title */}
         <title>
-          {title ||
-            `Find Best Apartments in Bangalore | MyCityFlat - Trusted Real Estate`}
+          AI Property Hub | MyCityFlat - Smart Property Analysis in Bangalore
         </title>
 
         {/* Meta Description */}
         <meta
           name="description"
-          content={
-            description ||
-            "Search and discover premium apartments in Bangalore. Find 1BHK, 2BHK, and luxury flats with verified listings, location insights, and real-time property updates."
-          }
+          content="Use AI Property Hub by MyCityFlat to analyze Bangalore real estate trends, compare properties, and make smart investment decisions with AI insights."
         />
 
-        {/* Meta Keywords */}
+        {/* Keywords */}
         <meta
           name="keywords"
-          content={
-            keywords ||
-            "Bangalore apartments, flats for rent Bangalore, 1BHK, 2BHK, luxury flats, property listing Bangalore, verified properties"
-          }
+          content="Bangalore apartments, AI property analysis, real estate trends, property investment, 1BHK, 2BHK, luxury flats Bangalore"
         />
 
-        {/* Social Sharing / Open Graph */}
-        <meta property="og:title" content={title || "MyCityFlat - Apartments in Bangalore"} />
+        {/* Open Graph for Social Sharing */}
+        <meta
+          property="og:title"
+          content="AI Property Hub | MyCityFlat - Real Estate Insights"
+        />
         <meta
           property="og:description"
-          content={
-            description ||
-            "Search premium apartments in Bangalore with MyCityFlat. Verified properties, location insights, and smart investment options."
-          }
+          content="Analyze Bangalore properties with AI-powered insights, compare prices, and make informed investment decisions with MyCityFlat's AI Property Hub."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={currentUrl} />
@@ -76,14 +83,12 @@ const SEO = ({ title, description, keywords, propertyData }) => {
       </Helmet>
 
       {/* Structured Data JSON-LD */}
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
     </>
   );
 };
 
-export default SEO;
+export default AiHubSEO;
