@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 const StructuredData = ({ type, data }) => {
   const location = useLocation();
-  const currentUrl = `https://buildestate.vercel.app${location.pathname}`;
+  const currentUrl = `https://www.mycityflat.in${location.pathname}`;
 
   // Different schema types based on page content
   const schemas = {
     website: {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'BuildEstate',
-      url: 'https://buildestate.vercel.app',
+      name: 'mycityflat',
+      url: 'https://www.mycityflat.in/',
       potentialAction: {
         '@type': 'SearchAction',
         target: '{search_term_string}',
@@ -21,12 +21,12 @@ const StructuredData = ({ type, data }) => {
     organization: {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'BuildEstate',
-      url: 'https://buildestate.vercel.app',
-      logo: 'https://buildestate.vercel.app/logo.png',
+      name: 'mycityflat',
+      url: 'https://www.mycityflat.in/',
+      logo: 'https://www.mycityflat.in//logo.png',
       sameAs: [
-        'https://github.com/AAYUSH412/Real-Estate-Website',
-        'https://linkedin.com/in/AAYUSH412'
+        'https://github.com/PrakashAikash',
+        'https://www.linkedin.com/in/prakash-kumar-sahni-ba541b236/'
       ]
     },
     property: {
@@ -57,7 +57,7 @@ const StructuredData = ({ type, data }) => {
       name: 'AI Property Hub',
       applicationCategory: 'RealEstateApplication',
       description: 'AI-powered real estate analytics and recommendations tool',
-      url: 'https://buildestate.vercel.app/ai-property-hub',
+      url: 'https://www.mycityflat.in/ai-property-hub',
       offers: {
         '@type': 'Offer',
         price: '0',
