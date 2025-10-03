@@ -60,12 +60,13 @@ const Companies = () => {
   ];
 
   const companyLogos = [
-    { src: logos.Googlelogo, alt: "Google", name: "Google" },
-    { src: logos.Bookinglogo, alt: "Booking.com", name: "Booking.com" },
-    { src: logos.Airbnblogo, alt: "Airbnb", name: "Airbnb" },
-    { src: logos.Microsoftlogo, alt: "Microsoft", name: "Microsoft" },
-    { src: logos.Amazonlogo, alt: "Amazon", name: "Amazon" }
-  ];
+  { src: logos.Prestige, alt: "Prestige", name: "Prestige", url: "https://www.prestigeconstructions.com/" },
+  { src: logos.Assetz, alt: "Assetz", name: "Assetz", url: "https://www.assetzproperty.com/" },
+  { src: logos.Brigadegroup, alt: "Brigadegroup", name: "Brigadegroup", url: "https://www.brigadegroup.com/" },
+  { src: logos.sobha, alt: "sobha", name: "sobha", url: "https://www.sobha.com/" },
+  { src: logos.Sbr, alt: "Sbr", name: "Sbr", url: "https://sbrgroup.in/" }
+];
+
 
   return (
     <section className="py-20 relative overflow-hidden">
@@ -173,24 +174,32 @@ const Companies = () => {
                 }}
                 className="group relative"
               >
-                <div className="relative overflow-hidden rounded-xl bg-white/80 backdrop-blur-sm p-6 border border-gray-100 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <img 
-                    className="h-12 w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" 
-                    src={logo.src} 
-                    alt={logo.alt}
-                    width="158" 
-                    height="48" 
-                  />
-                  
-                  {/* Hover effect overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300"></div>
-                  
-                  {/* Tooltip */}
-                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
-                    {logo.name}
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
-                  </div>
-                </div>
+                <a 
+  href={logo.url} 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  aria-label={`Visit ${logo.name} website`}
+  className="block relative overflow-hidden rounded-xl bg-white/80 backdrop-blur-sm p-6 border border-gray-100 shadow-lg group-hover:shadow-xl transition-all duration-300"
+>
+  <img 
+    className="h-12 w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" 
+    src={logo.src} 
+    alt={logo.alt}
+    width="158" 
+    height="48"
+    loading="lazy"
+  />
+
+  {/* Hover Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300"></div>
+
+  {/* Tooltip */}
+  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+    {logo.name}
+    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
+  </div>
+</a>
+
               </motion.div>
             ))}
           </motion.div>
