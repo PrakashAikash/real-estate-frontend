@@ -11,6 +11,7 @@ export default defineConfig({
     },
   },
   build: {
+    chunkSizeWarningLimit: 2000, // <-- yaha add karo, size KB me (default 500)
     rollupOptions: {
       external: [],
       output: {
