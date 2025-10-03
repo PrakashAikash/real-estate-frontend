@@ -6,18 +6,23 @@ import heroimage from "../assets/images/heroimage.png";
 import { RadialGradient } from "react-text-gradients";
 
 const popularLocations = [
-  
-   
   "Bangalore",
-  
+  "Whitefield",
+  "Electronic City",
+  "Hebbal",
+  "Koramangala",
+  "Indiranagar",
+  "Marathahalli",
+  "Yelahanka"
 ];
 
 const quickFilters = [
-  { label: "Apartments", icon: Home, count: "2.5k+" },
-  { label: "Houses", icon: Home, count: "1.8k+" },
-  { label: "Villas", icon: Home, count: "750+" },
-  { label: "Studios", icon: Home, count: "1.2k+" }
+  { label: "Bangalore Apartments", icon: Home, count: "2.5k+" },
+  { label: "Bangalore Houses", icon: Home, count: "1.8k+" },
+  { label: "Luxury Villas in Bangalore", icon: Home, count: "750+" },
+  { label: "Studio Apartments Bangalore", icon: Home, count: "1.2k+" }
 ];
+
 
 const stats = [
 // { icon: Users, value: "50K+", label: "Happy Customers", color: "from-blue-500 to-cyan-500" },
@@ -171,7 +176,7 @@ const Hero = () => {
               className="text-center"
             >
               {/* Trust Badge */}
-              <motion.div 
+              {/*<motion.div 
                 variants={itemVariants}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white/90 backdrop-blur-md text-blue-700 rounded-full text-sm font-semibold mb-8 shadow-lg border border-blue-100"
               >
@@ -182,11 +187,34 @@ const Hero = () => {
                     <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>*/}
+<motion.div 
+  variants={itemVariants}
+  className="inline-flex flex-col sm:flex-row items-center gap-2 px-4 sm:px-6 py-2 bg-white/90 backdrop-blur-md text-blue-700 rounded-full text-xs sm:text-sm md:text-base font-semibold mb-8 shadow-lg border border-blue-100 text-center sm:text-left"
+>
+  <Shield className="w-4 h-4" />
+  <a 
+    href="http://www.mycityflat.in/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="hover:underline break-words"
+  >
+    50,000+ Families in Bangalore Choose MyCityFlat for Apartments, Houses & Villas
+  </a>
+  <div className="flex items-center gap-1 mt-1 sm:mt-0">
+    {[...Array(5)].map((_, i) => (
+      <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+    ))}
+  </div>
+</motion.div>
+
+
+
+
 
               {/* Main Heading */}
               <motion.div variants={itemVariants} className="mb-8">
-                <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-[0.9]">
+               {/* <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-[0.9]">
                   <RadialGradient
                     gradient={["circle, rgba(227, 74, 42, 255) 0%, rgba(149, 4, 118, 1) 100%"]}
                   >
@@ -196,7 +224,26 @@ const Hero = () => {
                   <span className="text-gray-900 bg-gradient-to-r from-gray-800 via-gray-900 to-black bg-clip-text text-transparent">
                     Home with
                   </span>
-                </h1>
+                </h1> */}
+
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-5 md:mb-6 leading-snug sm:leading-snug md:leading-tight">
+  <RadialGradient
+    gradient={["circle, rgba(227, 74, 42, 1) 0%, rgba(149, 4, 118, 1) 100%"]}
+  >
+    Your Dream Apartment & Villa in Bangalore Awaits
+  </RadialGradient>
+  <br />
+  <span className="block text-gray-900 bg-gradient-to-r from-gray-800 via-gray-900 to-black bg-clip-text text-transparent text-sm sm:text-base md:text-lg lg:text-xl font-medium mt-1 sm:mt-2">
+    Apartments, Houses & Villas for 50,000+ Happy Families
+  </span>
+</h1>
+
+
+
+                
+
+                
+
 
                 <motion.p 
                   variants={itemVariants}
@@ -273,17 +320,20 @@ const Hero = () => {
                       </motion.button>
                       
                       <motion.button
-                        onClick={() => handleSubmit()}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 
-                          text-white rounded-2xl hover:shadow-2xl transition-all flex items-center gap-3 
-                          font-bold text-lg shadow-xl"
-                      >
-                        <Search className="w-5 h-5" />
-                        <span>Search Properties</span>
-                        <ArrowRight className="w-5 h-5" />
-                      </motion.button>
+  onClick={() => handleSubmit()}
+  whileHover={{ scale: 1.02 }}
+  whileTap={{ scale: 0.98 }}
+  className="px-6 py-3 text-white rounded-xl hover:shadow-lg transition-all flex items-center gap-2 font-semibold text-base shadow-md"
+  style={{
+    background: "radial-gradient(circle, rgba(227, 74, 42, 1) 0%, rgba(149, 4, 118, 1) 100%)"
+  }}
+>
+  <Search className="w-4 h-4" />
+  <span>Search Properties</span>
+  <ArrowRight className="w-4 h-4" />
+</motion.button>
+
+
                     </div>
                   </div>
 
