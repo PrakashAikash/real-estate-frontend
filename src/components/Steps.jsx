@@ -230,15 +230,18 @@ export default function HowItWorks() {
         >
           {/* Badge */}
           <motion.span 
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-indigo-100 
-              text-blue-700 px-6 py-2 rounded-full text-sm font-semibold tracking-wide uppercase 
-              shadow-lg border border-blue-200/50 backdrop-blur-sm"
-            animate={pulseAnimation}
-          >
-            <Zap className="w-4 h-4" />
-            Simple Process
-            <Sparkles className="w-4 h-4" />
-          </motion.span>
+  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-indigo-100 
+    text-blue-700 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase 
+    shadow-lg border border-blue-200/50 backdrop-blur-sm"
+  animate={pulseAnimation}
+  role="status"
+  aria-label="Simple 3-step property search process in Bangalore"
+>
+  <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+  Simple 3-Step Property Search in Bangalore
+  <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+</motion.span>
+
           
           {/* Main heading */}
           <motion.h2 
@@ -275,14 +278,14 @@ export default function HowItWorks() {
           
           {/* Description */}
           <motion.p 
-            className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-          >
-            Finding your perfect property is easy with our{" "}
-            <span className="font-semibold text-blue-600">website</span> three-step process
-          </motion.p>
+  className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xl sm:max-w-3xl mx-auto leading-relaxed"
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ delay: 0.8 }}
+>
+  Finding your perfect property in <span className="font-semibold text-blue-600">Bangalore</span> is easy with our <span className="font-semibold text-blue-600">website's three-step property search process</span>.
+</motion.p>
+
           
           {/* Stats */}
           <motion.div 

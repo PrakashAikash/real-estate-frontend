@@ -53,10 +53,10 @@ const floatingAnimation = {
 
 const Companies = () => {
   const stats = [
-  { icon: Users, value: "200+", label: "Trusted Bangalore Partners" },
+  { icon: Users, value: "201+", label: "Trusted Bangalore Partners" },
   { icon: Star, value: "4.9", label: "Average Rating from Bangalore Clients" },
-  { icon: Award, value: "50M+", label: "Properties Listed in Bangalore" },
-  { icon: TrendingUp, value: "98%", label: "Success Rate in Bangalore Real Estate" }
+  { icon: Award, value: "50K+", label: "Properties Listed in Bangalore" },
+  { icon: TrendingUp, value: "99%", label: "Success Rate in Bangalore Real Estate" }
 ];
 
 
@@ -237,29 +237,48 @@ const Companies = () => {
           </motion.div>
 
           {/* Trust Indicators */}
-          <motion.div
-            variants={itemVariants}
-            className="mt-12 pt-8 border-t border-gray-200"
-          >
-            <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="font-medium">Enterprise Security</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                <span className="font-medium">24/7 Support</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                <span className="font-medium">99.9% Uptime</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-                <span className="font-medium">GDPR Compliant</span>
-              </div>
-            </div>
-          </motion.div>
+          <motion.section
+  variants={itemVariants}
+  className="mt-12 pt-8 border-t border-gray-200"
+  aria-label="Platform Features and Security"
+>
+  <div className="flex flex-wrap justify-center items-center gap-8 text-sm sm:text-base text-gray-600">
+    
+    <div className="flex items-center gap-2">
+      <span
+        className="w-2 h-2 bg-green-500 rounded-full animate-pulse"
+        aria-hidden="true"
+      ></span>
+      <span className="font-medium">Enterprise Security for Bangalore Clients</span>
+    </div>
+    
+    <div className="flex items-center gap-2">
+      <span
+        className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"
+        aria-hidden="true"
+      ></span>
+      <span className="font-medium">24/7 Support in Bangalore</span>
+    </div>
+    
+    <div className="flex items-center gap-2">
+      <span
+        className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"
+        aria-hidden="true"
+      ></span>
+      <span className="font-medium">99.9% Uptime Guaranteed</span>
+    </div>
+    
+    <div className="flex items-center gap-2">
+      <span
+        className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"
+        aria-hidden="true"
+      ></span>
+      <span className="font-medium">GDPR Compliant & Secure</span>
+    </div>
+    
+  </div>
+</motion.section>
+
         </motion.div>
 
         {/* Call to Action */}

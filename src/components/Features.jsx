@@ -83,21 +83,21 @@ const Features = () => {
           className="text-center mb-20"
         >
           <motion.div 
-            animate={floatingAnimation}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 rounded-full text-sm font-semibold tracking-wide mb-6 shadow-lg border border-blue-200/50"
-          >
-            <Sparkles className="w-4 h-4" />
-            OUR PREMIUM FEATURES
-            <Sparkles className="w-4 h-4" />
-          </motion.div>
-          
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent mb-6 leading-tight">
-            Why Choose{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Excellence
-            </span>
-          </h2>
-          
+  animate={floatingAnimation}
+  className="inline-flex items-center gap-1 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#e34a2a] to-[#950476] text-white rounded-full text-xs sm:text-sm font-semibold tracking-wide mb-4 sm:mb-6 shadow-lg border border-purple-700/30"
+>
+  <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
+  PREMIUM REAL ESTATE FEATURES IN BANGALORE
+  <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
+</motion.div>
+
+<h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug">
+  <span className="text-black">Why Choose </span>
+  <span className="bg-gradient-to-r from-[#e34a2a] via-[#950476] to-[#e34a2a] bg-clip-text text-transparent">
+    Excellence in Bangalore Real Estate
+  </span>
+</h2>
+
           <div className="flex justify-center mb-8">
             <motion.div 
               className="w-32 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-600 rounded-full shadow-lg"
@@ -105,31 +105,54 @@ const Features = () => {
             ></motion.div>
           </div>
           
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
-            Experience unparalleled service with our innovative approach to finding your{' '}
-            <span className="text-blue-600 font-semibold">perfect home</span>
-          </p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+  Experience unparalleled service with our innovative approach to helping you find your{' '}
+  <span className="text-blue-600 font-semibold">perfect home in Bangalore</span>, 
+  whether it's a modern apartment, luxurious villa, or family-friendly property.
+</p>
+
 
           {/* Trust indicators */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="flex flex-wrap justify-center items-center gap-8 mt-12 text-sm text-gray-500"
-          >
-            <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-yellow-500" />
-              <span className="font-medium">Award Winning Service</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-green-500" />
-              <span className="font-medium">98% Success Rate</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-              <span className="font-medium">Trusted by 10K+ Families</span>
-            </div>
-          </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5 }}
+  className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mt-6 sm:mt-8 text-xs sm:text-sm md:text-base text-gray-500"
+>
+  <div 
+    className="flex items-center gap-1 sm:gap-2"
+    role="status" 
+    aria-label="Award Winning Real Estate Service in Bangalore"
+  >
+    <Award className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500" aria-hidden="true" />
+    <span className="font-medium text-xs sm:text-sm md:text-base">
+      Award Winning <strong>Bangalore Real Estate Service</strong>
+    </span>
+  </div>
+
+  <div 
+    className="flex items-center gap-1 sm:gap-2"
+    role="status" 
+    aria-label="98% Success Rate for Real Estate Properties in Bangalore"
+  >
+    <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" aria-hidden="true" />
+    <span className="font-medium text-xs sm:text-sm md:text-base">
+      98% Success Rate for <strong>Bangalore Properties</strong>
+    </span>
+  </div>
+
+  <div 
+    className="flex items-center gap-1 sm:gap-2"
+    role="status" 
+    aria-label="Trusted by over 10,000 Families for Bangalore Real Estate"
+  >
+    <div className="w-2 h-2 sm:w-2 sm:h-2 bg-blue-500 rounded-full animate-pulse"></div>
+    <span className="font-medium text-xs sm:text-sm md:text-base">
+      Trusted by 10K+ Families in <strong>Bangalore Real Estate</strong>
+    </span>
+  </div>
+</motion.div>
+
         </motion.div>
 
         {/* Enhanced Features Grid */}
@@ -196,13 +219,16 @@ const Features = () => {
                   className="flex items-center justify-between pt-6 border-t border-gray-100 group-hover:border-blue-200 transition-colors duration-300"
                 >
                   <motion.a 
-                    href="#" 
-                    className="inline-flex items-center text-blue-600 text-sm font-semibold hover:text-blue-800 transition-colors group/link"
-                    whileHover={{ x: 5 }}
-                  >
-                    Explore Feature
-                    <ChevronRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" />
-                  </motion.a>
+  href="/features" 
+  className="inline-flex items-center text-blue-600 text-xs sm:text-sm font-semibold hover:text-blue-800 transition-colors group/link"
+  whileHover={{ x: 5 }}
+  aria-label="Explore Premium Real Estate Features in Bangalore"
+  title="Explore Premium Real Estate Features in Bangalore"
+>
+  Explore Premium Real Estate Features in Bangalore
+  <ChevronRight className="ml-1 sm:ml-2 h-3 sm:h-4 w-3 sm:w-4 group-hover/link:translate-x-1 transition-transform duration-300" />
+</motion.a>
+
                   
                   <motion.div
                     className="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
@@ -237,16 +263,18 @@ const Features = () => {
               <TrendingUp className="w-8 h-8 text-white" />
             </motion.div>
             
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Ready to Find Your{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Dream Home?
-              </span>
-            </h3>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 leading-snug">
+  Ready to Find Your{' '}
+  <span className="bg-gradient-to-r from-[#e34a2a] via-[#950476] to-[#e34a2a] bg-clip-text text-transparent">
+    Dream Home in Bangalore?
+  </span>
+</h3>
+
             
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who found their perfect home with our premium features and personalized service.
-            </p>
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-xl sm:max-w-2xl mx-auto leading-relaxed">
+  Join thousands of satisfied customers in <span className="font-semibold text-blue-600">Bangalore</span> who found their perfect home with our premium real estate features and personalized service.
+</p>
+
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
@@ -280,18 +308,23 @@ const Features = () => {
               transition={{ delay: 0.8 }}
               className="flex flex-wrap justify-center items-center gap-8 mt-12 pt-8 border-t border-gray-200"
             >
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="font-medium">10,000+ Happy Families</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                <span className="font-medium">5-Star Average Rating</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                <span className="font-medium">24/7 Premium Support</span>
-              </div>
+              <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mt-6 sm:mt-8 text-xs sm:text-sm text-gray-600">
+  <div className="flex items-center gap-2" role="status" aria-label="Over 10,000 happy families in Bangalore real estate">
+    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+    <span className="font-medium">10,000+ Happy Families in Bangalore</span>
+  </div>
+
+  <div className="flex items-center gap-2" role="status" aria-label="5-Star Average Rating for Bangalore Properties">
+    <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+    <span className="font-medium">5-Star Average Rating for Bangalore Properties</span>
+  </div>
+
+  <div className="flex items-center gap-2" role="status" aria-label="24/7 Premium Support for Bangalore Real Estate Customers">
+    <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+    <span className="font-medium">24/7 Premium Support for Bangalore Real Estate Customers</span>
+  </div>
+</div>
+
             </motion.div>
           </div>
         </motion.div>
