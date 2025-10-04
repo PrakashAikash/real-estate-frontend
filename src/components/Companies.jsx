@@ -53,19 +53,46 @@ const floatingAnimation = {
 
 const Companies = () => {
   const stats = [
-    { icon: Users, value: "200+", label: "Trusted Partners" },
-    { icon: Star, value: "4.9", label: "Average Rating" },
-    { icon: Award, value: "50M+", label: "Properties Listed" },
-    { icon: TrendingUp, value: "98%", label: "Success Rate" }
-  ];
+  { icon: Users, value: "200+", label: "Trusted Bangalore Partners" },
+  { icon: Star, value: "4.9", label: "Average Rating from Bangalore Clients" },
+  { icon: Award, value: "50M+", label: "Properties Listed in Bangalore" },
+  { icon: TrendingUp, value: "98%", label: "Success Rate in Bangalore Real Estate" }
+];
+
 
   const companyLogos = [
-  { src: logos.Prestige, alt: "Prestige", name: "Prestige", url: "https://www.prestigeconstructions.com/" },
-  { src: logos.Assetz, alt: "Assetz", name: "Assetz", url: "https://www.assetzproperty.com/" },
-  { src: logos.Brigadegroup, alt: "Brigadegroup", name: "Brigadegroup", url: "https://www.brigadegroup.com/" },
-  { src: logos.sobha, alt: "sobha", name: "sobha", url: "https://www.sobha.com/" },
-  { src: logos.Sbr, alt: "Sbr", name: "Sbr", url: "https://sbrgroup.in/" }
+  { 
+    src: logos.Prestige, 
+    alt: "Prestige Apartments and Flats for Sale in Bangalore | Prestige Group Real Estate", 
+    name: "Prestige", 
+    url: "https://www.prestigeconstructions.com/" 
+  },
+  { 
+    src: logos.Assetz, 
+    alt: "Assetz Property Bangalore | Luxury Apartments, Flats and Villas for Sale", 
+    name: "Assetz", 
+    url: "https://www.assetzproperty.com/" 
+  },
+  { 
+    src: logos.Brigadegroup, 
+    alt: "Brigade Group Apartments and Flats in Bangalore | Brigade Real Estate Projects", 
+    name: "Brigadegroup", 
+    url: "https://www.brigadegroup.com/" 
+  },
+  { 
+    src: logos.sobha, 
+    alt: "Sobha Luxury Apartments and Villas in Bangalore | Sobha Real Estate Projects", 
+    name: "Sobha", 
+    url: "https://www.sobha.com/" 
+  },
+  { 
+    src: logos.Sbr, 
+    alt: "SBR Group Villas and Apartments in Whitefield Bangalore | SBR Real Estate", 
+    name: "Sbr", 
+    url: "https://sbrgroup.in/" 
+  }
 ];
+
 
 
   return (
@@ -86,30 +113,34 @@ const Companies = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <motion.div 
-            variants={itemVariants}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6"
-          >
-            <Shield className="w-4 h-4" />
-            Trusted INDIA
-          </motion.div>
+          <motion.span
+  variants={itemVariants}
+  className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6"
+  aria-label="Trusted in India and Bangalore"
+>
+  <Shield className="w-4 h-4" aria-hidden="true" />
+  Trusted in Bangalore & India
+</motion.span>
+
           
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
-          >
-            Trusted by{' '}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Industry Leaders
-            </span>
-          </motion.h2>
+          <motion.h2
+  variants={itemVariants}
+  className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+>
+  Trusted by{' '}
+  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+    Bangalore’s Industry Leaders
+  </span>
+</motion.h2>
+
           
-          <motion.p 
-            variants={itemVariants}
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
-          >
-            Join thousands of successful companies that rely on our platform for their real estate needs
-          </motion.p>
+          <motion.p
+  variants={itemVariants}
+  className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+>
+  Join thousands of successful <strong>Bangalore-based companies</strong> that rely on our platform for their real estate needs and grow their business in the city.
+</motion.p>
+
         </motion.div>
 
         {/* Stats Section */}
@@ -148,16 +179,17 @@ const Companies = () => {
           className="bg-white/60 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-gray-200 shadow-2xl"
         >
           <motion.div 
-            variants={itemVariants}
-            className="text-center mb-12"
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              Building Dreamss for Every Homeowner
-            </h3>
-            <p className="text-gray-600">
-              {`From modern apartments to luxurious villas, we connect you with the most trusted builders in Bangalore.
-`}            </p>
-          </motion.div>
+  variants={itemVariants}
+  className="text-center mb-12"
+>
+  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
+    Building Dreams for Every Homeowner in Bangalore
+  </h3>
+  <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
+    From modern apartments to luxurious villas, we connect you with the most trusted <strong>Bangalore-based builders</strong> to make your dream home a reality.
+  </p>
+</motion.div>
+
 
           <motion.div 
             variants={containerVariants}
@@ -238,21 +270,33 @@ const Companies = () => {
           className="text-center mt-16"
         >
           <motion.button
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white rounded-2xl 
-              shadow-2xl hover:shadow-blue-500/25 transition-all font-bold text-lg inline-flex items-center group relative overflow-hidden"
-          >
-            <span className="relative z-10 flex items-center">
-              Join Our Network
-              <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </motion.button>
+  whileHover={{ scale: 1.05, y: -2 }}
+  whileTap={{ scale: 0.98 }}
+  className="px-6 py-3 sm:px-8 sm:py-4 text-white rounded-2xl 
+             shadow-2xl hover:shadow-pink-500/25 transition-all 
+             font-bold text-base sm:text-lg inline-flex items-center group relative overflow-hidden"
+  style={{
+    background: "radial-gradient(circle, rgba(227, 74, 42, 1) 0%, rgba(149, 4, 118, 1) 100%)",
+  }}
+>
+  <span className="relative z-10 flex items-center">
+    Join Our Real Estate Network in Bangalore
+    <TrendingUp
+      className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+      aria-label="Trending Up Icon"
+    />
+  </span>
+  {/* Optional Hover Overlay */}
+  <div className="absolute inset-0 opacity-0 group-hover:opacity-80 transition-opacity duration-300 rounded-2xl" 
+       style={{ background: "rgba(0,0,0,0.1)" }}>
+  </div>
+</motion.button>
+
           
-          <p className="text-gray-500 mt-4 text-sm">
-            Start your journey with industry-leading companies today
-          </p>
+          <p className="text-gray-500 mt-4 text-sm sm:text-base">
+  Start your journey with <strong>Bangalore’s top real estate companies</strong> today and grow your network in the city.
+</p>
+
         </motion.div>
       </div>
     </section>
