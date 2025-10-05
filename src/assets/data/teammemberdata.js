@@ -53,7 +53,7 @@ export const teamMembers = [
       title: 'Prakash Kumar | Property Advisor – MyCityFlat Bangalore',
       description: 'Prakash Kumar, Property Advisor at MyCityFlat, helps clients discover top apartments, villas, and plots in Bangalore with trust and personalized guidance.',
       keywords: 'Prakash Kumar, Property Advisor, MyCityFlat, real estate expert Bangalore, flats for sale, property advisor Whitefield, best real estate agency Bangalore',
-      canonical: 'https://www.mycityflat.in/team/prakash-kumar',
+      canonical: 'https://www.mycityflat.in/team/prakash-kumr',
     }
   }
 ];
