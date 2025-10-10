@@ -9,9 +9,9 @@ export const teamMembers = [
     bio: 'Aditya Singh is the visionary CEO and Founder of MyCityFlat, one of Bangalore’s most trusted real estate platforms. With a mission to simplify property buying and selling, he connects buyers with top apartments, villas, and plots from reputed builders. Under his leadership, MyCityFlat has become a name synonymous with trust, transparency, and innovation in Bangalore real estate.',
     image: adityaimage,
     social: {
-      linkedin: 'https://www.linkedin.com/in/aditya-singh/',
-      twitter: 'https://twitter.com/adityasingh',
-      instagram: 'https://www.instagram.com/aditya_singh/'
+      linkedin: '#',
+      twitter: '#',
+      instagram: '#'
     },
     seo: {
       title: 'Aditya Singh | CEO & Founder – MyCityFlat | Bangalore Real Estate Expert',
@@ -26,9 +26,9 @@ export const teamMembers = [
     bio: 'With over 6 years of real estate expertise, Raj Ranjan helps clients find their dream homes in Bangalore. His deep market knowledge, honest guidance, and strong client-first approach make every property purchase simple and stress-free.',
     image: rajimage,
     social: {
-      linkedin: 'https://www.linkedin.com/in/raj-ranjan/',
+      linkedin: '#',
       twitter: '#',
-      instagram: 'https://www.instagram.com/raj_ranjan_realty/'
+      instagram: '#'
       
     },
     seo: {
@@ -44,7 +44,7 @@ export const teamMembers = [
     bio: 'Prakash Kumar is a dedicated property advisor passionate about helping families find their dream homes across Bangalore. With his honest consultation, expert guidance, and strong builder connections, he ensures a smooth and transparent property journey.',
     image: aayushimage,
     social: {
-      linkedin: 'https://www.linkedin.com/in//',
+      linkedin: '#',
       twitter: '#',
       instagram: 'https://www.instagram.com/prakash_aikash/'
      
