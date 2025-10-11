@@ -441,8 +441,12 @@ export default function HowItWorks() {
             >
               <div className="text-6xl text-blue-600/20 font-serif leading-none">&ldquo;</div>
               <p className="text-gray-700 italic text-xl lg:text-2xl mb-6 leading-relaxed -mt-4">
-                The 3-step process was incredibly smooth. Within a week, I found and secured my dream apartment!
-              </p>
+  The 3-step home buying process in <strong>Bangalore</strong> was incredibly smooth. 
+  Within just a week, I found and secured my <strong>dream apartment in Whitefield, Bangalore</strong> 
+  through <strong>mycityflat.in</strong> — one of the most trusted platforms for 
+  <strong> luxury apartments, 2BHK & 3BHK flats in Bangalore</strong>!
+</p>
+
               
               {/* Author info */}
               <div className="flex items-center justify-center gap-4">
