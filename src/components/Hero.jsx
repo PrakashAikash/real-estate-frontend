@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import heroimage from "../assets/images/heroimage.png";
 import { RadialGradient } from "react-text-gradients";
+import heroVideo from "../assets/videos/hero-video.mp4";
 
 const popularLocations = [
   "Bangalore",
@@ -104,6 +105,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50"></div>
         
         {/* Hero image with overlay */}
+       {/*
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -118,6 +120,32 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-white/10" />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10" />
         </motion.div>
+
+        */}  
+
+<motion.div
+  initial={{ opacity: 0, scale: 1.1 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 2, ease: "easeOut" }}
+  className="absolute inset-0 overflow-hidden"
+>
+  <video
+    className="w-full h-full object-cover"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src={heroVideo} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* Overlay gradients (same as before) */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-white/10" />
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10" />
+</motion.div>
+
+
 
         {/* Floating background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
