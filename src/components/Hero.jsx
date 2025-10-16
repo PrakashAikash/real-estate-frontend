@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Search, MapPin, ArrowRight, Star, Users, Home, Shield, Sparkles, TrendingUp, Filter } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import heroimage from "../assets/images/heroimage.png";
 import { RadialGradient } from "react-text-gradients";
 import heroVideo from "../assets/videos/hero-video.mp4";
+import heroVideoWebM from "../assets/videos/hero-video.webm";
+import heroVideoMobile from "../assets/videos/hero-video-mobile.mp4";
+import heroVideoMobileWebM from "../assets/videos/hero-video-mobile.webm";
+  // ✅ useEffect add kar do
+
+
+
 
 
 const popularLocations = [
@@ -86,6 +93,18 @@ const Hero = () => {
   const [propertyType, setPropertyType] = useState("All");
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
+
   const handleSubmit = (location = searchQuery) => {
     if (location.trim()) {
       navigate(`/properties?location=${encodeURIComponent(location)}&type=${propertyType}`);
@@ -124,7 +143,7 @@ const Hero = () => {
 
         */}
 
-        <motion.div
+       <motion.div
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 1.5, ease: "easeOut" }}
@@ -135,14 +154,12 @@ const Hero = () => {
     backgroundPosition: "center"
   }}
 >
-  <video
-    src={window.innerWidth < 768 ? heroVideoMobile : heroVideo} 
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="w-full h-full object-cover"
-  />
+  <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+    <source src={isMobile ? heroVideoMobile : heroVideo} type="video/mp4" />
+    <source src={isMobile ? heroVideoMobileWebM : heroVideoWebM} type="video/webm" />
+    <img src={heroimage} alt="Hero Background" />
+  </video>
+
   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/10" />
   <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10" />
 </motion.div>
@@ -173,7 +190,7 @@ const Hero = () => {
         </div>
 
         {/* Sparkle effects */}
-       *<div className="absolute inset-0 pointer-events-none">
+       <div className="absolute inset-0 pointer-events-none">
           {[...Array(6)].map((_, i) => (
             <motion.div
               key={i}
