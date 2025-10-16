@@ -129,24 +129,24 @@ const Hero = () => {
   animate={{ opacity: 1 }}
   transition={{ duration: 1.5, ease: "easeOut" }}
   className="absolute inset-0 overflow-hidden"
+  style={{
+    backgroundImage: `url(${heroimage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center"
+  }}
 >
-  {/* Background video */}
   <video
-    src={heroVideo}
+    src={window.innerWidth < 768 ? heroVideoMobile : heroVideo} 
     autoPlay
     loop
     muted
     playsInline
-    preload="auto"
     className="w-full h-full object-cover"
-  >
-    Your browser does not support the video tag.
-  </video>
-
-  {/* Gradient overlays for better text readability */}
-  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/10 pointer-events-none" />
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10 pointer-events-none" />
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/10" />
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10" />
 </motion.div>
+
 
 
         {/* Floating background elements */}
