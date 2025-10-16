@@ -6,8 +6,6 @@ import heroimage from "../assets/images/heroimage.png";
 import { RadialGradient } from "react-text-gradients";
 import heroVideo from "../assets/videos/hero-video.mp4";
 import heroVideoWebM from "../assets/videos/hero-video.webm";
-import heroVideoMobile from "../assets/videos/hero-video-mobile.mp4";
-import heroVideoMobileWebM from "../assets/videos/hero-video-mobile.webm";
   // ✅ useEffect add kar do
 
 
@@ -96,10 +94,7 @@ const Hero = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
 useEffect(() => {
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
-  };
-
+  const handleResize = () => setIsMobile(window.innerWidth <= 768);
   window.addEventListener("resize", handleResize);
   return () => window.removeEventListener("resize", handleResize);
 }, []);
@@ -151,19 +146,33 @@ useEffect(() => {
   style={{
     backgroundImage: `url(${heroimage})`,
     backgroundSize: "cover",
-    backgroundPosition: "center"
+    backgroundPosition: "center",
   }}
 >
-  <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-    <source src={isMobile ? heroVideoMobile : heroVideo} type="video/mp4" />
-    <source src={isMobile ? heroVideoMobileWebM : heroVideoWebM} type="video/webm" />
-    <img src={heroimage} alt="Hero Background" />
-  </video>
+  {/* 👇 Only show video on desktop/laptop */}
+  {!isMobile && (
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      className="w-full h-full object-cover"
+      onError={(e) => {
+        console.warn("⚠️ Video failed, showing fallback image...");
+        e.target.style.display = "none";
+      }}
+    >
+      <source src={heroVideoWebM} type="video/webm" />
+      <source src={heroVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  )}
 
+  {/* 👇 Gradient overlays for better text contrast */}
   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/10" />
   <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10" />
 </motion.div>
-
 
 
         {/* Floating background elements */}
